@@ -17,30 +17,39 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/styles.css" class="css" />
   </head>
   <body>
     <main class="container">
-      <article class="card">
-        <h2>Equilibrium #3429</h2>
-        <p>Our Equilibrium collection promotes balance and calm.</p>
-        <p>
-          <span><img src="images/icon-ethereum.svg" alt="" /></span>0.041 ETH
+      <article class="card__image">
+        <img src="images/image-equilibrium.jpg" alt="" />
+        <div>
+          <img src="images/icon-view.svg" alt="" />
+        </div>
+      </article>
+
+      <article>
+        <h2 class="card__title">Equilibrium #3429</h2>
+        <p class="card__description">
+          Our Equilibrium collection promotes balance and calm.
         </p>
-        <p>
-          <span><img src="images/icon-clock.svg" alt="" /></span>3 days left
-        </p>
-        <p>
-          <span><img src="images/image-avatar.png" alt="" /></span> of Jules
-          Wyvern
-        </p>
+        <ul>
+          <li><img src="images/icon-ethereum.svg" alt="" /> 0.041 ETH</li>
+          <li><img src="images/icon-clock.svg" alt="" />3 days left</li>
+        </ul>
+      </article>
+
+      <article class="card__avatar">
+        <img src="images/image-avatar.png" alt="" />
+        <p>Creation of <span>Jules Wyvern</span></p>
       </article>
     </main>
-
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Andrew Teece</a>
+      >
+      Coded by <a href="#">Andrew Teece</a>
     </footer>
   </body>
 </html>

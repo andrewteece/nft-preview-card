@@ -52,7 +52,7 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.3;
+  line-height: 1.5;
 }
 
 /* A elements that don't have a class get default styles */
@@ -92,11 +92,141 @@ select {
   }
 }
 
+/* GLOBAL STYLES */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--clr-neutral-900);
+  font-family: var(--ff-base);
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* LAYOUT STYLES */
+
+.container {
+    max-width: 21.875rem;
+    padding: 1.25rem;
+    background-color: var(--clr-neutral-800);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.container .card__image {
+    position: relative;
+}
+
+.card__image img {
+    border-radius: 1rem;
+}
+
+.container .card__image div {
+    position: absolute;
+    top: 0;
+    background-color: var(--clr-primary-400);
+    width: 100%;
+    height: calc(100% - .1rem);
+    border-radius: 1rem;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+}
+
+.container .card__image div:hover {
+    opacity: 1;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.container .card__image div img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+}
+
+.card__title {
+    color: var(--clr-neutral-100);
+    margin: 1rem .5rem .5rem 0;
+    transition: .7s ease-in-out;
+}
+
+.card__title:hover {
+    color: var(--clr-primary-400);
+    cursor: pointer;
+}
+
+.card__description {
+    color: var(--clr-primary-300);
+    font-weight: var(--fw-light);
+}
+
+.container ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--clr-neutral-500);
+}
+
+.container ul li {
+    display: flex;
+    align-items: center;
+}
+
+.container ul li:first-child {
+    color: var(--clr-primary-400);
+}
+
+.container ul li:last-child {
+    color: var(--clr-primary-300);
+}
+
+.container ul li img {
+    margin-right: .5rem;
+}
+
+.card__avatar {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.card__avatar img {
+    width: 3.5rem;
+    border: 2px solid var(--clr-neutral-100);
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.card__avatar p {
+    color: var(--clr-primary-300);
+}
+
+.card__avatar p span {
+    color: var(--clr-neutral-100);
+    font-weight: var(--fw-regular);
+}
+
+.card__avatar p span:hover {
+    color: var(--clr-primary-400);
+    cursor: pointer;
+    transition: .7s ease-in-out;
+}
+
+
 /* FEM ATTRIB */
 
 .attribution {
-  font-size: 11px;
+  font-size: 14px;
   text-align: center;
+  color: var(--clr-primary-300);
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
